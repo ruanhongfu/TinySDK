@@ -1,0 +1,3 @@
+include ':TinySDK'
+include ':app'
+rootProject.name = "CodeChallenge"
