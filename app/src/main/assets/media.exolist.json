@@ -5,12 +5,21 @@
       "uri": "https://demo.unified-streaming.com/video/smurfs/smurfs.ism/smurfs.mpd"
     },
     {
+      "name": "edgesuite stream - cert issue",
+      "uri": "http://dash.edgesuite.net/envivio/dashpr/clear/Manifest.mpd"
+    },
+    {
       "name": "axprod stream",
       "uri": "https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_1080p.mpd"
     },
     {
-      "name": "akamaized stream",
+      "name": "EnvivioDash2",
+      "uri": "https://dash.akamaized.net/envivio/Envivio-dash2/manifest.mpd"
+    },
+    {
+      "name": "EnvivioDash3",
       "uri": "https://dash.akamaized.net/envivio/EnvivioDash3/manifest.mpd"
+
     }
   ],
 
