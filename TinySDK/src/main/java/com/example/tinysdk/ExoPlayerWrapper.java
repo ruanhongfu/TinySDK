@@ -63,10 +63,30 @@ public class ExoPlayerWrapper implements
 
     public void onPause() {
         Log.e(TAG, "onPause");
+        if(player!=null) {
+            player.setPlayWhenReady(false);
+        }
     }
 
     public void onResume() {
         Log.e(TAG, "onResume");
+        if(player!=null) {
+            player.setPlayWhenReady(true);
+        }
+    }
+
+    public void onStop() {
+        Log.e(TAG, "onStop");
+        if(player!=null)
+            player.stop(true);
+    }
+
+    public void onDestroy() {
+        Log.e(TAG, "onDestroy");
+        if(player!=null) {
+            player.stop(true);
+            player.release();
+        }
     }
 
     public void playStreambyUri(Uri stream_uri) {

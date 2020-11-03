@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CodeChallenge</string>
+    <string name="app_name">Demo-TinySDK</string>
     <string name="track_selection_title">Select tracks</string>
     <string name="error_cleartext_not_permitted">Cleartext traffic not permitted</string>
     <string name="error_generic">Playback failed</string>
@@ -7,5 +7,5 @@
     <!---TO MOVE TO json file-->
     <string name="test_stream_1">unified stream</string>
     <string name="test_stream_2">edgesuite stream</string>
-    <string name="test_stream_3">Google Glass H264</string>
+    <string name="test_stream_3">Google Glass</string>
 </resources>
