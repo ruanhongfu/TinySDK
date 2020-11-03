@@ -1,21 +1,31 @@
 {
-  "name": "test stream samples for demo",
-  "samples": [
+  "samples online": [
     {
-      "name": "smurfs.mpd",
+      "name": "unified-streaming stream",
       "uri": "https://demo.unified-streaming.com/video/smurfs/smurfs.ism/smurfs.mpd"
     },
     {
-      "name": "Google Glass H264 (MP4)",
-      "uri": "https://www.youtube.com/api/manifest/dash/id/bf5bb2419360daf1/source/youtube?as=fmp4_audio_clear,fmp4_sd_hd_clear&sparams=ip,ipbits,expire,source,id,as&ip=0.0.0.0&ipbits=0&expire=19000000000&signature=51AF5F39AB0CEC3E5497CD9C900EBFEAECCCB5C7.8506521BFC350652163895D4C26DEE124209AA9E&key=ik0"
+      "name": "axprod stream",
+      "uri": "https://media.axprod.net/TestVectors/v7-MultiDRM-SingleKey/Manifest_1080p.mpd"
     },
     {
-      "name": "[local] edgesuite",
-      "uri": "https://10.168.1.15/clear/Manifest.mpd"
+      "name": "akamaized stream",
+      "uri": "https://dash.akamaized.net/envivio/EnvivioDash3/manifest.mpd"
+    }
+  ],
+
+  "samples on local": [
+    {
+      "name": "Google Glass H264 (MP4)",
+      "uri": "https://10.168.1.15/google/Manifest.mpd"
     },
     {
       "name": "edgesuite",
-      "uri": "https://dash.edgesuite.net/envivio/dashpr/clear/Manifest.mpd"
+      "uri": "https://10.168.1.15/clear/Manifest.mpd"
+    },
+    {
+      "name": "pnp kpi",
+      "uri": "https://10.168.1.15/pnpkpi/Manifest.mpd"
     }
   ]
 }
