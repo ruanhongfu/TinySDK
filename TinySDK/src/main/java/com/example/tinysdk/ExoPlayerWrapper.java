@@ -86,6 +86,7 @@ public class ExoPlayerWrapper implements
         if(player!=null) {
             player.stop(true);
             player.release();
+            player = null;
         }
     }
 
