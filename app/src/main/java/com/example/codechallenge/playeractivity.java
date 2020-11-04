@@ -38,22 +38,22 @@ public class playeractivity extends Activity implements View.OnClickListener {
     }
 
     private void setButtons() {
+        RadioButton vt_auto_button = findViewById(R.id.videotrack_auto);
         RadioButton vt1_button = findViewById(R.id.videotrack1_btn);
         RadioButton vt2_button = findViewById(R.id.videotrack2_btn);
         RadioButton vt3_button = findViewById(R.id.videotrack3_btn);
         RadioButton vt4_button = findViewById(R.id.videotrack4_btn);
         RadioButton vt5_button = findViewById(R.id.videotrack5_btn);
-        RadioButton vt6_button = findViewById(R.id.videotrack6_btn);
         RadioButton at1_button = findViewById(R.id.audiotrack1_btn);
         RadioButton at2_button = findViewById(R.id.audiotrack2_btn);
         RadioButton at3_button = findViewById(R.id.audiotrack3_btn);
 
+        vt_auto_button.setOnClickListener(this);
         vt1_button.setOnClickListener(this);
         vt2_button.setOnClickListener(this);
         vt3_button.setOnClickListener(this);
         vt4_button.setOnClickListener(this);
         vt5_button.setOnClickListener(this);
-        vt6_button.setOnClickListener(this);
         at1_button.setOnClickListener(this);
         at2_button.setOnClickListener(this);
         at3_button.setOnClickListener(this);

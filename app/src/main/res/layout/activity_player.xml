@@ -14,113 +14,118 @@
      limitations under the License.
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
     <com.google.android.exoplayer2.ui.StyledPlayerView
         android:id="@+id/player_view"
         android:layout_width="match_parent"
         android:layout_height="536dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/video_select" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#88000000"
-        android:orientation="vertical">
-    </LinearLayout>
-
-    <LinearLayout android:id="@+id/streams_panel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_gravity="bottom"
-        android:layout_alignParentBottom="true">
+        android:orientation="horizontal">
 
-        <Switch
-            android:id="@+id/manual_track_switch"
+        <RadioButton
+            android:id="@+id/videotrack_auto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="select track manually" />
-    </LinearLayout>
+            android:enabled="false"
+            android:text="@string/auto" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="bottom"
-        android:layout_alignParentBottom="true">
         <RadioButton
             android:id="@+id/videotrack1_btn"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="vt1"
-            android:enabled="false"/>
+            android:layout_weight="1"
+            android:enabled="false"
+            android:text="@string/vt1" />
+
         <RadioButton
             android:id="@+id/videotrack2_btn"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="vt2"
-            android:enabled="false"/>
+            android:layout_weight="1"
+            android:enabled="false"
+            android:text="@string/vt2" />
+
         <RadioButton
             android:id="@+id/videotrack3_btn"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="vt3"
-            android:enabled="false"/>
+            android:layout_weight="1"
+            android:enabled="false"
+            android:text="@string/vt3" />
+
         <RadioButton
             android:id="@+id/videotrack4_btn"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="vt4"
-            android:enabled="false"/>
+            android:layout_weight="1"
+            android:enabled="false"
+            android:text="@string/vt4" />
+
         <RadioButton
             android:id="@+id/videotrack5_btn"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="vt5"
-            android:enabled="false"/>
-        <RadioButton
-            android:id="@+id/videotrack6_btn"
             android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="vt6"
-            android:enabled="false"/>
+            android:enabled="false"
+            android:text="@string/vt5" />
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/audio_select" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_gravity="bottom"
-        android:layout_alignParentBottom="true">
+        android:orientation="horizontal">
+
         <RadioButton
             android:id="@+id/audiotrack1_btn"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="at1"
-            android:enabled="false"/>
+            android:layout_weight="1"
+            android:enabled="false"
+            android:text="@string/at1" />
+
         <RadioButton
             android:id="@+id/audiotrack2_btn"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="at2"
-            android:enabled="false"/>
+            android:layout_weight="1"
+            android:enabled="false"
+            android:text="@string/at2" />
+
         <RadioButton
             android:id="@+id/audiotrack3_btn"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="at3"
-            android:enabled="false"/>
+            android:layout_weight="1"
+            android:enabled="false"
+            android:text="@string/at3" />
     </LinearLayout>
 </LinearLayout>

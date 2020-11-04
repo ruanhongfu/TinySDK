@@ -1,11 +1,18 @@
 <resources>
     <string name="app_name">Demo-TinySDK</string>
-    <string name="track_selection_title">Select tracks</string>
-    <string name="error_cleartext_not_permitted">Cleartext traffic not permitted</string>
-    <string name="error_generic">Playback failed</string>
 
-    <!---TO MOVE TO json file-->
-    <string name="test_stream_1">unified stream</string>
-    <string name="test_stream_2">edgesuite stream</string>
-    <string name="test_stream_3">Google Glass</string>
+    <string name="video_select">select video track:</string>
+    <string name="auto">auto</string>
+    <string name="vt1">#1</string>
+    <string name="vt2">#2</string>
+    <string name="vt3">#3</string>
+    <string name="vt4">#4</string>
+    <string name="vt5">#5</string>
+
+    <string name="audio_select">select audio language:</string>
+    <string name="at1">language 1</string>
+    <string name="at2">language 2</string>
+    <string name="at3">language 3</string>
+
+    <string name="group_external">external sample streams</string>
 </resources>

@@ -8,19 +8,25 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
+import com.google.android.exoplayer2.util.Log;
+
 import java.util.HashMap;
 import java.util.List;
 
 public class SampleGroupListAdapter extends BaseExpandableListAdapter {
+    private static final String TAG = "adapter";
     private Context context;
-    private List<String> StreamListTitle;
     private HashMap<String, List<String>> StreamList;
+    private List<String> StreamListTitle;
 
     public SampleGroupListAdapter(Context context, List<String> expandableListTitle,
                                        HashMap<String, List<String>> expandableListDetail) {
         this.context = context;
         this.StreamListTitle = expandableListTitle;
         this.StreamList = expandableListDetail;
+        Log.e(TAG, ""+this.StreamList.size());
+        Log.e(TAG, ""+this.StreamList.get("external sample streams"));
+        Log.e(TAG, ""+this.StreamList.get("local sample streams"));
     }
 
     @Override

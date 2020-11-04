@@ -18,6 +18,7 @@ import com.google.android.exoplayer2.source.DefaultMediaSourceFactory;
 import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.source.MediaSourceFactory;
 import com.google.android.exoplayer2.source.dash.DashMediaSource;
+import com.google.android.exoplayer2.trackselection.DefaultTrackSelector;
 import com.google.android.exoplayer2.ui.StyledPlayerControlView;
 import com.google.android.exoplayer2.ui.StyledPlayerView;
 import com.google.android.exoplayer2.upstream.DataSource;
@@ -33,7 +34,7 @@ public class ExoPlayerWrapper implements
         StyledPlayerControlView.VisibilityListener,
         PlaybackPreparer {
 
-    private static final String TAG = "wrapper";
+    private static final String TAG = "tinysdk";
 
     private Context mContext;
     private SimpleExoPlayer player;
@@ -91,6 +92,8 @@ public class ExoPlayerWrapper implements
     }
 
     public void playStreambyUri(Uri stream_uri) {
+        if(player == null)  return;
+
         Log.e(TAG, "playStreambyUri: " + stream_uri.toString());
         if(stream_uri == null) {
             Log.e(TAG, "empty stream uri, skip...");
@@ -128,7 +131,7 @@ public class ExoPlayerWrapper implements
     @Override
     public void onClick(View view) {
         Log.e(TAG, "onClick");
-
+        //todo
         switch (view.getId()) {
             default:
                 break;
@@ -138,6 +141,7 @@ public class ExoPlayerWrapper implements
     //private functions
     private void InitializePlayer() {
         Log.e(TAG, "InitializePlayer");
+        if (player != null)     return;
 
         //prepare renderersfactory and mediasourcefactory for player
         RenderersFactory renderersFactory = new DefaultRenderersFactory(mContext);
@@ -146,8 +150,10 @@ public class ExoPlayerWrapper implements
         MediaSourceFactory mediaSourceFactory = new DefaultMediaSourceFactory(dataSourceFactory);
 
         if(renderersFactory!=null && mediaSourceFactory!=null) {
+            DefaultTrackSelector trackSelector = new DefaultTrackSelector(mContext);
             player = new SimpleExoPlayer.Builder(mContext, renderersFactory)
                     .setMediaSourceFactory(mediaSourceFactory)
+                    .setTrackSelector(trackSelector)
                     .build();
 
             player.setPlayWhenReady(true);

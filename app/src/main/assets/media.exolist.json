@@ -1,5 +1,5 @@
 {
-  "samples online": [
+  "external sample streams": [
     {
       "name": "unified-streaming stream",
       "uri": "https://demo.unified-streaming.com/video/smurfs/smurfs.ism/smurfs.mpd"
@@ -23,10 +23,14 @@
     }
   ],
 
-  "samples on local": [
+  "local sample streams": [
     {
-      "name": "Google Glass H264 (MP4)",
-      "uri": "https://10.168.1.15/google/Manifest.mpd"
+      "name": "CL-sintel",
+      "uri": "https://10.168.1.15/cls/sintel_abr.mpd"
+    },
+    {
+      "name": "CL-bbb",
+      "uri": "https://10.168.1.15/cls/Manifest_new_bbb_abr.mpd"
     },
     {
       "name": "edgesuite",
