@@ -25,13 +25,11 @@
         android:layout_width="match_parent"
         android:layout_height="536dp" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:baselineAligned="false"
+        android:layout_weight="1"
         android:ems="10"
-        android:inputType="textPersonName"
         android:text="@string/video_select" />
 
     <LinearLayout
@@ -87,15 +85,15 @@
             android:layout_weight="1"
             android:enabled="false"
             android:text="@string/vt5" />
+
+
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:ems="10"
-        android:inputType="textPersonName"
         android:text="@string/audio_select" />
 
     <LinearLayout
