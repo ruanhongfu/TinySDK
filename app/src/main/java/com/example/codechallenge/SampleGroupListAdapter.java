@@ -15,9 +15,9 @@ import java.util.List;
 
 public class SampleGroupListAdapter extends BaseExpandableListAdapter {
     private static final String TAG = "adapter";
-    private Context context;
-    private HashMap<String, List<String>> StreamList;
-    private List<String> StreamListTitle;
+    private final Context context;
+    private final HashMap<String, List<String>> StreamList;
+    private final List<String> StreamListTitle;
 
     public SampleGroupListAdapter(Context context, List<String> expandableListTitle,
                                        HashMap<String, List<String>> expandableListDetail) {
@@ -49,7 +49,7 @@ public class SampleGroupListAdapter extends BaseExpandableListAdapter {
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = layoutInflater.inflate(R.layout.list_item, null);
         }
-        TextView expandedListTextView = (TextView) convertView
+        TextView expandedListTextView = convertView
                 .findViewById(R.id.expandedListItem);
         expandedListTextView.setText(expandedListText);
         return convertView;
@@ -85,7 +85,7 @@ public class SampleGroupListAdapter extends BaseExpandableListAdapter {
                     getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = layoutInflater.inflate(R.layout.list_group, null);
         }
-        TextView listTitleTextView = (TextView) convertView
+        TextView listTitleTextView = convertView
                 .findViewById(R.id.listTitle);
         listTitleTextView.setTypeface(null, Typeface.BOLD);
         listTitleTextView.setText(listTitle);

@@ -13,10 +13,9 @@ import com.google.android.exoplayer2.util.Log;
 
 public class playeractivity extends Activity implements View.OnClickListener {
     private static final String TAG = "player";
-    public static final String ACTION_PLAY = "com.codechallenge.demo.action.PLAY";
 
     protected ExoPlayerWrapper mWrapper;
-    private StyledPlayerView playerView;
+    StyledPlayerView playerView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

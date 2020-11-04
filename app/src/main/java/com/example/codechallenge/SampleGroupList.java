@@ -18,14 +18,14 @@ public class SampleGroupList {
     private static final String TAG = "samplelist";
     //save uri of both external and internal stream samples into hash with title as key
     //stream title couldn't be same, or uri will be overwritten
-    private static HashMap<String, String> m_uri_hash = new HashMap<String, String>();
-    private static HashMap<String, List<String>> mStreamList = new HashMap<String, List<String>>();
+    private final static HashMap<String, String> m_uri_hash = new HashMap<>();
+    private final static HashMap<String, List<String>> mStreamList = new HashMap<>();
 
     public static HashMap<String, List<String>> LoadStreamSamples (Context context, String filename) {
         Log.d(TAG, "getData");
 
-        List<String>  m_external_title_list = new ArrayList<String>();
-        List<String>  m_local_title_list = new ArrayList<String>();
+        List<String>  m_external_title_list = new ArrayList<>();
+        List<String>  m_local_title_list = new ArrayList<>();
         m_uri_hash.clear();
         mStreamList.clear();
         try {
@@ -79,14 +79,14 @@ public class SampleGroupList {
     }
 
     private static String loadJSONFromAsset(Context context, String Jsonfile) {
-        String json = null;
+        String json;
         try {
             InputStream is = context.getAssets().open(Jsonfile);
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
             is.close();
-            json = new String(buffer, "UTF-8");
+            json = new String(buffer, "UTF_8");
         } catch (IOException ex) {
             ex.printStackTrace();
             return null;

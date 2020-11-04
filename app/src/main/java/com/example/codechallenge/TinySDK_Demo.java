@@ -5,7 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ExpandableListView;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.exoplayer2.util.Log;
 
 import java.util.ArrayList;
@@ -17,13 +20,13 @@ public class TinySDK_Demo extends AppCompatActivity {
     private static final String TAG = "demo";
     private static final String streamlistfile = "media.exolist.json";
     public static final String TEST_STREAM_URI = "test_stream_url_info";
-    private Context mContext = this;
+    private final Context mContext = this;
 
     //for sample list
-    private SampleGroupListAdapter sampleGroupListAdapter;
-    private ExpandableListView streamListView;
-    private HashMap<String, List<String>> StreamList;
-    private List<String> StreamListTitle;
+    SampleGroupListAdapter sampleGroupListAdapter;
+    ExpandableListView streamListView;
+    HashMap<String, List<String>> StreamList;
+    List<String> StreamListTitle;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,7 +38,7 @@ public class TinySDK_Demo extends AppCompatActivity {
         //prepare sample list and listener, which starts player activity
         streamListView = findViewById(R.id.sample_list);
         StreamList = SampleGroupList.LoadStreamSamples(mContext, streamlistfile);
-        StreamListTitle = new ArrayList<String>(StreamList.keySet());
+        StreamListTitle = new ArrayList<>(StreamList.keySet());
         sampleGroupListAdapter = new SampleGroupListAdapter(this, StreamListTitle, StreamList);
         streamListView.setAdapter(sampleGroupListAdapter);
 
@@ -56,7 +59,7 @@ public class TinySDK_Demo extends AppCompatActivity {
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
         Log.d(TAG,"onSaveInstanceState");
         super.onSaveInstanceState(outState);
         //todo

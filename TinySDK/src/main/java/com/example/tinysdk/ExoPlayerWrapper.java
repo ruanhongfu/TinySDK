@@ -36,10 +36,10 @@ public class ExoPlayerWrapper implements
 
     private static final String TAG = "tinysdk";
 
-    private Context mContext;
+    final private Context mContext;
     private SimpleExoPlayer player;
     private StyledPlayerView mPlayview;
-    private MediaSource mMediaSource;
+    MediaSource mMediaSource;
     private DataSource.Factory dataSourceFactory;
 
     public ExoPlayerWrapper(Context context) {
@@ -56,6 +56,7 @@ public class ExoPlayerWrapper implements
 
         mPlayview.setPlayer(player);
         mPlayview.setPlaybackPreparer(this);
+
     }
 
     public void onStart() {
